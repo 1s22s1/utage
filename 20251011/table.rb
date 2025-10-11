@@ -17,11 +17,6 @@ ActiveRecord::Base.establish_connection(adapter: :sqlite3, database: ':memory:')
 ActiveRecord::Base.logger = Logger.new($stdout)
 
 ActiveRecord::Schema.define do
-  create_table :books, force: true do |t|
-    t.string :title
-    t.string :author
-  end
-
   create_table :companies, force: true do |t|
     t.string :code, null: false
     t.string :name, null: false
