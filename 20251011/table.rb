@@ -41,10 +41,6 @@ ActiveRecord::Schema.define do
   end
 end
 
-%i[Company Department Employee].each do |klass_name|
-  Object.const_set(klass_name, Class.new(ActiveRecord::Base))
-end
-
 class Company < ActiveRecord::Base
   has_many :employees
 end
